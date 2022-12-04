@@ -10,6 +10,12 @@
 
 ------------------------------------- Windows Insatll
 
+mingw - MinGW GNU C 3.4.2 and above
+mingw64 - MinGW GNU C x86-64
+msvc - Microsoft Visual C++
+msvc64 - Microsoft Visual C++ x86-64
+msvcia64 - Microsoft Visual C++ IA-64 (Itanium)
+
 git clone https://github.com/harbour/core.git harbour-core
 
 cd Harbour-Core
