@@ -7,3 +7,11 @@
 [Harbour Developers Group](https://groups.google.com/g/harbour-devel)
 
 [Harbour Core Repository ](https://github.com/harbour/core)
+
+------------------------------------- Windows Insatll
+
+
+------------------------------------- Linux Install
+
+
+
