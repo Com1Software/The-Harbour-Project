@@ -10,8 +10,16 @@
 
 ------------------------------------- Windows Insatll
 
+git clone https://github.com/harbour/core.git harbour-core
+
+cd Harbour-Core
+
+win-make
 
 ------------------------------------- Linux Install
 
+git clone https://github.com/harbour/core.git harbour-core
 
+cd Harbour-Core
 
+make
