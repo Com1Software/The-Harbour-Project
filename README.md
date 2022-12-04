@@ -10,9 +10,9 @@
 
 ------------------------------------- Windows Insatll
 
-mingw - MinGW GNU C 3.4.2 and above
+mingw - MinGW GNU C 3.4.2 and above <br> mingw64 - MinGW GNU C x86-64
 
-mingw64 - MinGW GNU C x86-64
+https://sourceforge.net/projects/mingw/files/Installer/
 
 msvc - Microsoft Visual C++
 
