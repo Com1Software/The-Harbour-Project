@@ -18,6 +18,8 @@ msvc - Microsoft Visual C++
 
 msvc64 - Microsoft Visual C++ x86-64
 
+https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
+
 msvcia64 - Microsoft Visual C++ IA-64 (Itanium)
 
 
