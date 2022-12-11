@@ -12,6 +12,8 @@
 
 mingw - MinGW GNU C 3.4.2 and above <br> mingw64 - MinGW GNU C x86-64
 
+https://winlibs.com/
+
 https://sourceforge.net/projects/mingw/files/Installer/
 
 https://sourceforge.net/projects/mingw/
