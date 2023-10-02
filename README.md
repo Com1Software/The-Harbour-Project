@@ -1,5 +1,7 @@
 # The-Harbour-Project
 
+[Harbour Playground](https://os.allcom.pl/harbour/)	
+
 [The Harbour Project Home](https://harbour.github.io/)
 
 [Harbour User Group](https://groups.google.com/g/harbour-users)
