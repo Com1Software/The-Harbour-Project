@@ -39,6 +39,6 @@ win-make
 
 git clone https://github.com/harbour/core.git harbour-core
 
-cd Harbour-Core
+cd harbour-core
 
 make
