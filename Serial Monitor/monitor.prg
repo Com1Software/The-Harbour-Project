@@ -1,15 +1,13 @@
 #include "hbcom.ch"
 
-PROCEDURE Main( cPortName )
+PROCEDURE Main( )
 
-   LOCAL cString := "ATE0" + Chr( 13 ) + "ATI3" + Chr( 13 )
-   LOCAL nTimeOut := 3000 // 3000 miliseconds = 3 sec.
+   LOCAL cString := ""
+   LOCAL nTimeOut := 500
    LOCAL nResult
+   local line:=""
    LOCAL nPort := 15
 
-   IF ! Empty( cPortName )
-      hb_comSetDevice( nPort, cPortName )
-   ENDIF
    IF ! hb_comOpen( nPort )
       ? "Cannot open port:", nPort, hb_comGetDevice( nPort ), ;
         "error: " + hb_ntos( hb_comGetError( nPort ) )
@@ -19,25 +17,22 @@ PROCEDURE Main( cPortName )
          ? "Cannot initialize port to: 9600:N:8:1", ;
            "error: " + hb_ntos( hb_comGetError( nPort ) )
       ELSE
-         nResult := hb_comSend( nPort, cString, hb_BLen( cString ), nTimeOut )
-         IF nResult != hb_BLen( cString )
-            ? "SEND() failed,", nResult, "bytes sent in", nTimeOut / 1000, ;
-              "sec., expected:", hb_BLen( cString ), "bytes."
-            ? "error: " + hb_ntos( hb_comGetError( nPort ) )
-         ELSE
-            ? "SEND() succeeded."
-         ENDIF
-
-         WAIT "Press any key to begin reading..."
-         cString := Space( 32 )
+         
+         do while .t.
+         cString := Space( 1 )
          nTimeOut := 500 // 500 milliseconds = 0.5 sec.
-         nResult := hb_comRecv( nPort, @cString, hb_BLen( cString ), nTimeOut )
-         IF nResult == -1
-            ? "RECV() failed,", ;
-              "error: " + hb_ntos( hb_comGetError( nPort ) )
-         ELSE
-            ? nResult, "bytes read in", nTimeOut / 1000, "sec."
+         nResult := hb_comRecv( nPort, @cString, hb_BLen( cString ),nTimeOut )
+      
+         IF nResult == 1
+            if asc(cstring)=13
+               ?line
+               line=""
+            else
+               line=line+cstring   
+            endif
+
          ENDIF
+      enddo
       ENDIF
       ? "CLOSE:", hb_comClose( nPort )
    ENDIF
