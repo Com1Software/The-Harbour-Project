@@ -47,27 +47,24 @@ RETURN
 
 FUNCTION DetectSerialPorts()
    local pa:=array(0)
-   local x:=0
+   local x:=25
    local nPort
    local cPortName:="/dev/ttyACM"
-
-   DO WHILE x < 25
-      
-      
-      
+   local cPort:=""
+   DO WHILE x > 0
       nPort=x
       IF hb_comOpen( nPort )
          aadd(pa,x)
          hb_comClose( nPort )
       ELSE
-         hb_comSetDevice( nPort, cPortName+str(x) )
+         cPort=cPortName+alltrim(str(x-1)) 
+         hb_comSetDevice( nPort, cPort)
          IF hb_comOpen( nPort )
             aadd(pa,x)
             hb_comClose( nPort )
          ENDIF
 
       ENDIF
-      x++
+      x--
    enddo
-   
 return (pa)
