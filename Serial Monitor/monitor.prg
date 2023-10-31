@@ -9,6 +9,7 @@ FUNCTION Main( )
    local line:=""
    LOCAL nPort := 0
    local pa:=DetectSerialPorts()
+   ?os()
    if len(pa)>0 
       nport=pa[1]
       IF ! hb_comOpen( nPort )
@@ -48,14 +49,25 @@ FUNCTION DetectSerialPorts()
    local pa:=array(0)
    local x:=0
    local nPort
+   local cPortName:="/dev/ttyACM"
 
    DO WHILE x < 25
-      x++
+      
+      
+      
       nPort=x
       IF hb_comOpen( nPort )
          aadd(pa,x)
          hb_comClose( nPort )
+      ELSE
+         hb_comSetDevice( nPort, cPortName+str(x) )
+         IF hb_comOpen( nPort )
+            aadd(pa,x)
+            hb_comClose( nPort )
+         ENDIF
+
       ENDIF
+      x++
    enddo
    
 return (pa)
