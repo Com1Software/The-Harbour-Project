@@ -1,4 +1,5 @@
 #include "hbcom.ch"
+#include "inkey.ch"
 
 FUNCTION Main( )
 
@@ -9,6 +10,9 @@ FUNCTION Main( )
    local line:=""
    LOCAL nPort := 0
    local pa:=DetectSerialPorts()
+   local lc:=0
+   local ik:=0
+
    ?os()
    if len(pa)>0 
       nport=pa[1]
@@ -23,13 +27,18 @@ FUNCTION Main( )
          ELSE
          
             do while .t.
+               ik=inkey()
+               if ik = 27 
+                  exit
+               endif       
                cString := Space( 1 )
                nTimeOut := 500 // 500 milliseconds = 0.5 sec.
                nResult := hb_comRecv( nPort, @cString, hb_BLen( cString ),nTimeOut )
       
                IF nResult == 1
                   if asc(cstring)=13
-                     ?line
+                     lc++
+                     ?line,lc
                      line=""
                   else
                      line=line+cstring   
