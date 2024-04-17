@@ -6,6 +6,10 @@ https://github.com/Com1Software/Go-Harbour
 
 [Harbour User Group](https://groups.google.com/g/harbour-users)
 
+[Harbour++](https://github.com/marcosgambeta/harbourpp-v1)
+
+[Harbour MiniGUI Extended for Harbour++](https://github.com/marcosgambeta/hmgextpp/tree/main)
+
 [Harbour Developers Group](https://groups.google.com/g/harbour-devel)
 
 [Harbour Playground](https://os.allcom.pl/harbour/)	
