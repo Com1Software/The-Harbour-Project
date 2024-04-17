@@ -6,6 +6,8 @@ https://github.com/Com1Software/Go-Harbour
 
 [Harbour User Group](https://groups.google.com/g/harbour-users)
 
+[HMG-Official](https://github.com/HMG-Official/HMG)
+
 [HMG Extended](https://www.hmgextended.com/)
 
 [Harbour++](https://github.com/marcosgambeta/harbourpp-v1)
