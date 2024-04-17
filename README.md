@@ -10,6 +10,8 @@ https://github.com/Com1Software/Go-Harbour
 
 [Harbour MiniGUI Extended for Harbour++](https://github.com/marcosgambeta/hmgextpp/tree/main)
 
+[Harbor++ Information, source code and updates](http://www.pctoledo.com.br/forum/viewtopic.php?f=43&t=26387)
+
 [Harbour Developers Group](https://groups.google.com/g/harbour-devel)
 
 [Harbour Playground](https://os.allcom.pl/harbour/)	
