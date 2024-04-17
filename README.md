@@ -24,6 +24,9 @@ https://github.com/Com1Software/Go-Harbour
 
 https://sourceforge.net/projects/mingw/files/Installer/
 
+
+git clone https://github.com/HMG-Official/HMG.git
+
 git clone https://github.com/harbour/core.git harbour-core
 
 cd harbour-core
