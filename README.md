@@ -6,6 +6,8 @@ https://github.com/Com1Software/Go-Harbour
 
 [Harbour User Group](https://groups.google.com/g/harbour-users)
 
+[HMG Google Forum](https://groups.google.com/g/minigui-forum)
+
 [HMG-Official](https://github.com/HMG-Official/HMG)
 
 [HMG Extended](https://www.hmgextended.com/)
